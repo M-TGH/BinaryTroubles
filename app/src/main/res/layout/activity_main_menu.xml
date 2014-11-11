@@ -12,29 +12,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10x10 Level"
-        android:id="@+id/but10x10"
+        android:text="08x08 Level"
+        android:id="@+id/but08x08"
         android:layout_below="@+id/textChooseLevel"
-        android:layout_alignLeft="@+id/but20x20"
-        android:layout_alignStart="@+id/but20x20"
+        android:layout_alignLeft="@+id/but14x14"
+        android:layout_alignStart="@+id/but14x14"
         android:layout_marginTop="40dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12x12 Level"
+        android:id="@+id/but12x12"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/but08x08"
+        android:layout_alignLeft="@+id/but08x08"
+        android:layout_alignStart="@+id/but08x08" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="14x14 Level"
         android:id="@+id/but14x14"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/but10x10"
-        android:layout_alignLeft="@+id/but10x10"
-        android:layout_alignStart="@+id/but10x10" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20x20 Level"
-        android:id="@+id/but20x20"
-        android:layout_below="@+id/but14x14"
+        android:layout_below="@+id/but12x12"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp" />
 

@@ -32,15 +32,17 @@ public class GameActivity extends Activity {
 
         int length = Integer.parseInt(levelSize.substring(0, 2));
         int width = Integer.parseInt(levelSize.substring(3));
-        int difficulty = 20;
+        double lengthd = (double) length;
+        double widthd = (double) width;
+        double difficulty = 20;
         if(levelDifficulty.equals("easy")){
-            difficulty = 50;
+            difficulty = lengthd * widthd * 0.5;
         } else if(levelDifficulty.equals("normal")){
-            difficulty = 60;
+            difficulty = lengthd * widthd * 0.6;
         } else if(levelDifficulty.equals("hard")){
-            difficulty = 70;
+            difficulty = lengthd * widthd * 0.7;
         }
-        Binary puzzle = new Binary(length, width, difficulty);
+        Binary puzzle = new Binary(length, width, (int) Math.floor(difficulty));
         int[][] board = puzzle.getBoard();
         int[][] solution = puzzle.getSolution();
 
@@ -68,7 +70,7 @@ public class GameActivity extends Activity {
                     txt = " ";
                 tv.setText(txt);
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
-                tv.setPadding(3, 2, 3, 2);
+                tv.setPadding(6, 2, 6, 2);
 
                 cell.addView(tv);
                 tr.addView(cell);

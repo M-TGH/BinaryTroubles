@@ -16,14 +16,21 @@ public class MainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Button but10x10 = (Button) findViewById(R.id.but10x10);
+        Button but08x08 = (Button) findViewById(R.id.but08x08);
+        Button but12x12 = (Button) findViewById(R.id.but12x12);
         Button but14x14 = (Button) findViewById(R.id.but14x14);
-        Button but20x20 = (Button) findViewById(R.id.but20x20);
 
-        but10x10.setOnClickListener(new View.OnClickListener() {
+        but08x08.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toDifficultyScreen("10x10");
+                toDifficultyScreen("08x08");
+            }
+        });
+
+        but12x12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toDifficultyScreen("12x12");
             }
         });
 
@@ -31,13 +38,6 @@ public class MainMenu extends Activity {
             @Override
             public void onClick(View v) {
                 toDifficultyScreen("14x14");
-            }
-        });
-
-        but20x20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toDifficultyScreen("20x20");
             }
         });
     }
